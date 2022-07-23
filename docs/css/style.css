@@ -8,7 +8,7 @@
 }
 
 html {
-  font-family: "Inter", "Source Han Sans", sans-serif;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
   font-size: 100%;
   line-height: 1;
 }
@@ -50,7 +50,7 @@ html {
 .onakasuitter {
   display: contents;
 }
-.tweet-button {
+.onakasuitter-button {
   align-items: center;
   background: var(--twitter-color);
   border-radius: calc(
@@ -63,19 +63,19 @@ html {
   display: inline-flex;
   padding: var(--default-padding);
 }
-.tweet-button:hover {
+.onakasuitter-button:hover {
   background: var(--twitter-focus-color);
   box-shadow: 0 0 2px 1px rgba(211, 211, 211, 0.5),
     0 2px 8px 2px rgba(127, 127, 127, 0.5);
 }
-.tweet-button:focus-visible {
+.onakasuitter-button:focus-visible {
   background: var(--twitter-focus-color);
 }
-.tweet-button__icon {
+.onakasuitter-button__icon {
   aspect-ratio: 1/1;
   block-size: var(--heading-font-size);
 }
-.tweet-button__text {
+.onakasuitter-button__text {
   font-feature-settings: "palt";
   font-size: var(--heading-font-size);
   font-weight: 800;
