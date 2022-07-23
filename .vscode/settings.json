@@ -1,0 +1,12 @@
+{
+  // These settings are intented to apply those of `.editorconfig` even if the extension is not installed.
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.renderControlCharacters": true,
+  "editor.tabSize": 2,
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true
+}
