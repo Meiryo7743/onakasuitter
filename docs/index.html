@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#">
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta name="author" content="Meiryo7743">
+
+    <meta property="og:description" content="Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。">
+    <meta property="og:image" content="https://meiryo7743.github.io/onakasuitter/ogp.png">
+    <meta property="og:site_name" content="onakasuitter">
+    <meta property="og:title" content="onakasuitter">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meiryo7743.github.io/onakasuitter/">
+
+    <title>onakasuitter - Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。</title>
+    <meta name="description" content="Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。">
+
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body class="body">
+    <header class="body__header">
+      <img src="./img/logo.svg" alt="onakasuitter" class="logo">
+    </header>
+
+    <main class="body__main">
+      <div class="onakasuitter" id="onakasuitter">
+        <a href="https://twitter.com/intent/tweet?text=%E3%81%8A%E8%85%B9%E3%81%8C%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81&hashtags=onakasuitter&url=https%3A%2F%2Fpic.twitter.com%2FSr0e5UKF1R"
+           target="_blank" class="tweet-button" role="button">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="tweet-button__icon" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                  d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38c-.83.5-1.75.85-2.72 1.05a4.28 4.28 0 0 0-7.32 3.91A12.2 12.2 0 0 1 3 4.79a4.24 4.24 0 0 0 1.33 5.71c-.71 0-1.37-.2-1.95-.5v.03a4.3 4.3 0 0 0 3.44 4.21 4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.52 8.52 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06A12.14 12.14 0 0 0 8.12 21C16 21 20.33 14.46 20.33 8.79l-.01-.56A8.57 8.57 0 0 0 22.46 6Z">
+          </svg>
+          <span class="tweet-button__text">ツイートする</span>
+        </a>
+      </div>
+
+      <article class="readme" id="readme">
+        <section class="readme__section" id="overview">
+          <h2 class="readme__title">これは何？</h2>
+          <p>簡単に「<strong>お腹が空きました！</strong>」と呟けるジェネレーターです。上の「<strong>ツイートする</strong>」ボタンを押下すると、新しいタブまたは Twitter
+            アプリが開かれます。</p>
+          <figure>
+            <img src="./img/demo.webp" alt="「お腹が空きました！ #onakasuitter」というツイートが入力された状態の画面">
+            <figcaption>onakasuitter で生成されたツイートをする様子</figcaption>
+          </figure>
+          <p>なお、<a href="https://pic.twitter.com/Sr0e5UKF1R">生成されるツイートに付随の URL</a> は、<a
+               href="https://twitter.com/naname_eis">さか (@naname_eis)</a>
+            様の<a
+               href="https://twitter.com/naname_eis/status/1550394473011507200">ツイート</a>に添付された画像です。利用を快諾してくださったこと、改めて感謝申し上げます。
+          </p>
+        </section>
+
+        <section class="readme__section" id="notes-and-disclaimers">
+          <h2 class="readme__title">注意・免責事項</h2>
+          <ul>
+            <li>本ジェネレーターの制作・運営者は <a href="https://meiryo7743.net">Meiryo7743</a> です。</li>
+            <li>本ジェネレーターのご利用によって生じたあらゆる不利益（トラブル、損失など）の責任を、運営者は一切負いかねます。必ず利用者様ご自身の判断の下でお使いください。</li>
+            <li>ツイートするには、あらかじめ Twitter に<a href="https://twitter.com/login">ログイン</a>する必要があります。</li>
+            <li>ツイートに使用している画像は、元画像の投稿者様が鍵垢に設定された場合、非表示となります。</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="body__footer">
+      <small class="copyright">&copy; 2022 Meiryo7743 &amp; the “onakasuitter” contributors</small>
+    </footer>
+  </body>
+
+</html>
