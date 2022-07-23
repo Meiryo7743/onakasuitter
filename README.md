@@ -1,9 +1,5 @@
-# PROJECT_NAME
-
-## Contributing
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+# onakasuitter
 
 ## License
 
-PROJECT_NAME is licensed under the [LICENSE_NAME](LICENSE).
+onakasuitter is licensed under the [MIT license](LICENSE).
