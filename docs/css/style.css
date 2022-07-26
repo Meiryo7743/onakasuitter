@@ -5,10 +5,13 @@
   --link-color: #006fbc;
   --twitter-color: hsl(204, 88%, 53%);
   --twitter-focus-color: hsl(204, 88%, 63%);
+  --default-font-family: "Inter", "Roboto", "Segoe UI", "Helvetica",
+    "Source Han Sans VF", "Source Han Sans JP VF", "Source Han Sans",
+    "Source Han Sans JP", "Noto Sans JP", "Noto Sans CJK JP";
 }
 
 html {
-  font-family: "Inter", "Noto Sans JP", sans-serif;
+  font-family: var(--default-font-family, sans-serif);
   font-size: 100%;
   line-height: 1;
 }
@@ -61,7 +64,8 @@ html {
   color: #fff; /* This determine both text and SVG fill color */
   column-gap: calc(var(--default-padding) / 2);
   display: inline-flex;
-  padding: var(--default-padding);
+  padding-block: var(--default-padding);
+  padding-inline: calc(var(--default-padding) * 1.5);
 }
 .onakasuitter-button:hover {
   background: var(--twitter-focus-color);
@@ -71,14 +75,8 @@ html {
 .onakasuitter-button:focus-visible {
   background: var(--twitter-focus-color);
 }
-.onakasuitter-button__icon {
-  aspect-ratio: 1/1;
-  block-size: var(--heading-font-size);
-}
 .onakasuitter-button__text {
-  font-feature-settings: "palt";
-  font-size: var(--heading-font-size);
-  font-weight: 800;
+  block-size: var(--heading-font-size);
 }
 
 .readme {
