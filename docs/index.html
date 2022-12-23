@@ -1,78 +1,121 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head
+    prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#"
+  >
+    <meta charset="UTF-8" />
+    <meta name="author" content="Meiryo7743" />
+    <meta
+      name="description"
+      content="Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。"
+    />
+    <meta
+      name="format-detection"
+      content="telephone=no, address=no, email=no"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#">
-    <meta charset="UTF-8">
+    <title>
+      onakasuitter - Twitter
+      で簡単に「お腹が空きました！」と呟けるジェネレーター。
+    </title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- OGP -->
+    <meta
+      property="og:description"
+      content="Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。"
+    />
+    <meta
+      property="og:image"
+      content="https://onakasuitter.meiryo7743.net/img/ogp.png"
+    />
+    <meta property="og:site_name" content="onakasuitter" />
+    <meta property="og:title" content="onakasuitter" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://onakasuitter.meiryo7743.net" />
 
-    <meta name="author" content="Meiryo7743">
+    <!-- OGP for Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@meiryo7743" />
 
-    <meta property="og:description" content="Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。">
-    <meta property="og:image" content="https://onakasuitter.meiryo7743.net/img/ogp.png">
-    <meta property="og:site_name" content="onakasuitter">
-    <meta property="og:title" content="onakasuitter">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://onakasuitter.meiryo7743.net">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Flex:opsz,wdth,wght@8..144,50,700;8..144,100,400&display=swap"
+      rel="stylesheet"
+    />
 
-    <title>onakasuitter - Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。</title>
-    <meta name="description" content="Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。">
-
-    <meta name="format-detection" content="telephone=no, address=no, email=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700;800&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/the-new-css-reset@latest/css/reset.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body class="body">
     <header class="body__header">
-      <img src="./img/logo.svg" alt="onakasuitter" class="logo">
+      <h1 class="title">onakasuitter</h1>
     </header>
 
     <main class="body__main">
-      <div class="onakasuitter" id="onakasuitter">
-        <a href="https://twitter.com/intent/tweet?text=%E3%81%8A%E8%85%B9%E3%81%8C%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81&hashtags=onakasuitter&url=https%3A%2F%2Fpic.twitter.com%2FSr0e5UKF1R"
-           rel="noopener" target="_blank" class="onakasuitter-button" role="button">
-          <img src="./img/tweet.svg" alt="ツイートする" class="onakasuitter-button__text">
+      <div class="onakasuitter">
+        <a
+          href="https://twitter.com/intent/tweet?text=%E3%81%8A%E8%85%B9%E3%81%8C%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81&hashtags=onakasuitter&url=https%3A%2F%2Fonakasuitter.meiryo7743.net"
+          rel="noopener"
+          target="_blank"
+          class="onakasuitter__button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            class="onakasuitter__icon"
+          >
+            <path
+              fill="currentColor"
+              d="M23.953 4.57a10 10 0 0 1-2.825.775a4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827a4.996 4.996 0 0 1-2.212.085a4.936 4.936 0 0 0 4.604 3.417a9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985c0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z"
+            />
+          </svg>
+          <span class="onakasuitter__text">ツイートする</span>
         </a>
       </div>
 
-      <article class="readme" id="readme">
-        <section id="how-to-use">
-          <h2>使い方</h2>
-          <p>上の「<strong>ツイートする</strong>」ボタンを押下すると、新しいタブまたは Twitter
-            アプリが開かれ、<a href="#demo">下の画像</a>のような状態に遷移します。あとはツイートボタンを押して、お腹がペコペコなことをアピールしましょう！</p>
-          <figure id="demo">
-            <img src="./img/demo.webp" alt="「お腹が空きました！ #onakasuitter」というツイートが入力された状態の画面">
-            <figcaption>onakasuitter で生成されたツイートをする様子</figcaption>
-          </figure>
-          <p>なお、<a href="https://pic.twitter.com/Sr0e5UKF1R" rel="noopener" target="_blank">生成されるツイートに付随の
-              URL（画像）</a>は、<a href="https://twitter.com/naname_eis" rel="noopener" target="_blank">@naname_eis</a>
-            様のものです。利用を快諾してくださったこと、心より感謝申し上げます。
-          </p>
-          <p>onakasuitter ではホスティングサービスとして GitHub Pages を利用しております。ソースコードは GitHub 上にて公開中ですので、ご興味のある方は<a
-               href="https://github.com/Meiryo7743/onakasuitter">リポジトリ</a>も覗いてみてください。</p>
-        </section>
+      <article class="readme">
+        <h2>使い方</h2>
+        <p>
+          上の「<strong>ツイートする</strong>」ボタンを押すだけ！　とても簡単です！！
+        </p>
 
-        <section class="readme__section" id="notes-and-disclaimers">
-          <h2>注意・免責事項</h2>
-          <ul>
-            <li>本ジェネレーターの制作・運営者は <a href="https://meiryo7743.net" rel="noopener" target="_blank">Meiryo7743</a> です。</li>
-            <li>本ジェネレーターのご利用によって生じたあらゆる不利益（トラブル、損失など）の責任を、運営者は一切負いかねます。必ず利用者様ご自身の判断の下でお使いください。</li>
-            <li>ツイートするには、あらかじめ Twitter に<a href="https://twitter.com/login" rel="noopener"
-                 target="_blank">ログイン</a>する必要があります。</li>
-            <li>ツイートに使用している画像は、元画像の投稿者様が鍵垢に設定された場合、非表示となります。</li>
-          </ul>
-        </section>
+        <h2>注意・免責事項等</h2>
+        <ul>
+          <li>ツイートするには、Twitter にログインする必要があります。</li>
+          <li>
+            onakasuitter の制作・運営者は
+            <a href="https://meiryo7743.net" rel="noopener" target="_blank"
+              >Meiryo7743</a
+            >
+            です。
+          </li>
+          <li>
+            onakasuitter
+            のご利用によって生じたあらゆる不利益（トラブル、損失など）の責任を、運営者は一切負いかねます。必ず利用者様ご自身の判断の下でお使いください。
+          </li>
+          <li>
+            <a href="https://github.com/Meiryo7743/onakasuitter"
+              >GitHub 上でソースコードを公開している</a
+            >ので、良ければ Star をください。
+          </li>
+        </ul>
       </article>
     </main>
 
     <footer class="body__footer">
-      <small class="copyright">&copy; 2022 Meiryo7743 &amp; the “onakasuitter” contributors</small>
+      <small class="copyright">
+        © 2022 Meiryo7743 &amp; the “onakasuitter” contributors
+      </small>
     </footer>
   </body>
-
 </html>
