@@ -1,12 +1,9 @@
 :root {
-  --default-padding: 16px;
-  --heading-font-size: 1.5rem;
   --light-gray: #dfe1e2;
   --link-color: #006fbc;
-  --twitter-color: hsl(204, 88%, 53%);
-  --twitter-focus-color: hsl(204, 88%, 63%);
-  --default-font-family: "Roboto Flex", "Source Han Sans VF", "Source Han Sans JP VF",
-    "Source Han Sans", "Source Han Sans JP", "Noto Sans JP", "Noto Sans CJK JP";
+  --default-font-family: "Roboto Flex", "Source Han Sans VF",
+    "Source Han Sans JP VF", "Source Han Sans", "Source Han Sans JP",
+    "Noto Sans JP", "Noto Sans CJK JP";
 }
 
 html {
@@ -56,25 +53,26 @@ html {
   justify-content: center;
 }
 .onakasuitter__button {
+  --background-color: hsl(204, 88%, 53%);
   --shadow: 0 0 8px 1px rgba(211, 211, 211, 0.5),
     0 1px 4px 1px rgba(127, 127, 127, 0.25);
   align-items: center;
-  background: var(--twitter-color);
+  background: var(--background-color);
   border-radius: 9999px;
   box-shadow: var(--shadow);
-  color: #fff; /* This determine both text and SVG fill color */
+  color: #fff;
   column-gap: 16px;
   display: flex;
   padding-block: 16px;
   padding-inline: 32px;
 }
 .onakasuitter__button:hover {
-  background: var(--twitter-focus-color);
+  --background-color: hsl(204, 88%, 63%);
   --shadow: 0 0 2px 1px rgba(211, 211, 211, 0.5),
     0 2px 8px 2px rgba(127, 127, 127, 0.5);
 }
 .onakasuitter__button:focus-visible {
-  background: var(--twitter-focus-color);
+  --background-color: hsl(204, 88%, 63%);
 }
 .onakasuitter__icon {
   aspect-ratio: 1/1;
@@ -115,11 +113,11 @@ html {
 .readme ul li::marker {
   content: "※";
 }
-.readme a{
+.readme a {
   color: #006fbc;
   text-decoration: underline;
 }
-.readme strong{
+.readme strong {
   font-weight: 700;
 }
 
