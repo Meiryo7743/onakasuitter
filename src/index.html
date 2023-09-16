@@ -7,23 +7,21 @@
     <meta name="author" content="Meiryo7743" />
     <meta
       name="description"
-      content="Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。"
+      content="簡単に「お腹が空きました！」と呟けるジェネレーター。"
     />
     <meta
       name="format-detection"
       content="telephone=no, address=no, email=no"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>
-      onakasuitter - Twitter
-      で簡単に「お腹が空きました！」と呟けるジェネレーター。
+      onakasuitter - 簡単に「お腹が空きました！」と呟けるジェネレーター。
     </title>
 
     <!-- OGP -->
     <meta
       property="og:description"
-      content="Twitter で簡単に「お腹が空きました！」と呟けるジェネレーター。"
+      content="簡単に「お腹が空きました！」と呟けるジェネレーター。"
     />
     <meta
       property="og:image"
@@ -36,13 +34,16 @@
 
     <!-- OGP for Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@meiryo7743" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Flex:opsz,wdth,wght@8..144,50,700;8..144,100,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap&text=%26-02347GHMNSabcehiknorstuy%C2%A9%E2%80%9C%E2%80%9D"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap&text=%E2%86%90%E3%80%81%E3%80%82%E3%81%82%E3%81%84%E3%81%86%E3%81%8A%E3%81%8B%E3%81%8C%E3%81%8F%E3%81%94%E3%81%95%E3%81%97%E3%81%98%E3%81%99%E3%81%9A%E3%81%9D%E3%81%9F%E3%81%A0%E3%81%A3%E3%81%A6%E3%81%A7%E3%81%A8%E3%81%AA%E3%81%AB%E3%81%AD%E3%81%AE%E3%81%AF%E3%81%B8%E3%81%BE%E3%81%BF%E3%82%81%E3%82%82%E3%82%86%E3%82%88%E3%82%89%E3%82%8A%E3%82%8B%E3%82%92%E3%82%93%E3%82%A2%E3%82%A4%E3%82%AF%E3%82%B0%E3%82%B3%E3%82%B9%E3%82%BB%E3%82%BD%E3%82%BF%E3%83%88%E3%83%89%E3%83%94%E3%83%96%E3%83%9C%E3%83%A9%E3%83%AB%E3%83%AD%E3%83%B3%E3%83%BB%E3%83%BC%E4%B8%80%E4%B8%8A%E4%B8%8B%E4%B8%8D%E4%BA%8B%E4%BB%8A%E4%BB%96%E4%BB%BB%E4%BD%BF%E5%85%8D%E5%85%AC%E5%88%87%E5%88%A4%E5%88%A9%E5%8D%98%E5%90%88%E5%96%B6%E5%A0%B4%E5%A4%B1%E5%BD%93%E5%BF%85%E6%84%8F%E6%8A%95%E6%8A%BC%E6%90%8D%E6%96%AD%E6%96%B9%E6%A7%98%E6%B3%A8%E6%B8%88%E7%94%9F%E7%94%A8%E7%9B%8A%E7%A8%BF%E7%A9%BA%E7%AD%89%E7%B0%A1%E8%80%85%E8%87%AA%E8%A6%81%E8%A6%A7%E8%A9%B2%E8%B2%A0%E8%B2%AC%E8%BA%AB%E9%81%8B%E9%81%B8%E9%96%8B%E9%A0%85%EF%BC%81%EF%BC%88%EF%BC%89"
       rel="stylesheet"
     />
 
@@ -53,47 +54,199 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-
   <body class="body">
-    <header class="body__header">
+    <header class="header">
       <h1 class="title">onakasuitter</h1>
     </header>
 
-    <main class="body__main">
-      <div class="onakasuitter">
-        <a
-          href="https://twitter.com/intent/tweet?text=%E3%81%8A%E8%85%B9%E3%81%8C%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81&hashtags=onakasuitter&url=https%3A%2F%2Fonakasuitter.meiryo7743.net"
-          rel="noopener"
-          target="_blank"
-          class="onakasuitter__button"
-        >
+    <main>
+      <div id="app" class="app">
+        <img
+          src="./img/ogp.png"
+          alt="おなかすいた"
+          width="256"
+          height="134"
+          class="app__image"
+        />
+
+        <nav class="app__nav">
+          <h2 class="heading">ボタンを押して投稿しよう！</h2>
+
+          <ul class="app__list">
+            <li>
+              <a
+                href="https://twitter.com/intent/tweet?text=%E3%81%8A%E8%85%B9%E3%81%8C%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%20%23onakasuitter&url=https%3A%2F%2Fonakasuitter.meiryo7743.net"
+                rel="noopener"
+                target="_blank"
+                class="app__button app__button--x"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584l-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://misskeyshare.link/share.html?text=%E3%81%8A%E8%85%B9%E3%81%8C%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%20%23onakasuitter&url=https%3A%2F%2Fonakasuitter.meiryo7743.net"
+                rel="noopener"
+                target="_blank"
+                class="app__button app__button--misskey"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M8.91 16.892c-1.039.003-1.931-.63-2.352-1.366c-.225-.322-.67-.437-.676 0v2.014c0 .81-.292 1.51-.876 2.1c-.567.574-1.26.86-2.078.86c-.8 0-1.493-.286-2.077-.86A2.928 2.928 0 0 1 0 17.54V6.46c0-.624.176-1.189.526-1.695a2.855 2.855 0 0 1 1.402-1.088a2.846 2.846 0 0 1 1-.177c.902 0 1.653.354 2.253 1.063l2.997 3.515c.067.05.263.437.732.437c.47 0 .692-.386.758-.437l2.972-3.515c.618-.709 1.377-1.063 2.278-1.063c.334 0 .668.059 1.001.177a2.73 2.73 0 0 1 1.377 1.088c.367.506.55 1.07.55 1.695v11.08c0 .81-.291 1.51-.875 2.1c-.568.573-1.26.86-2.078.86c-.801 0-1.493-.286-2.078-.86a2.928 2.928 0 0 1-.85-2.1v-2.014c-.05-.55-.531-.204-.702 0c-.45.843-1.313 1.361-2.352 1.366ZM21.448 8.61a2.49 2.49 0 0 1-1.802-.733c-.484-.506-.726-1.113-.726-1.822s.242-1.307.726-1.796a2.444 2.444 0 0 1 1.802-.758c.7 0 1.302.252 1.802.758c.5.49.751 1.088.751 1.796a2.5 2.5 0 0 1-.75 1.822a2.493 2.493 0 0 1-1.803.733Zm.025.507c.7 0 1.293.252 1.777.758a2.5 2.5 0 0 1 .751 1.822v6.248c0 .709-.25 1.316-.75 1.821a2.404 2.404 0 0 1-1.778.734c-.7 0-1.301-.244-1.802-.734a2.497 2.497 0 0 1-.75-1.82v-6.25a2.5 2.5 0 0 1 .75-1.82a2.444 2.444 0 0 1 1.802-.76Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://donshare.net/share.html?text=%E3%81%8A%E8%85%B9%E3%81%8C%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%20%23onakasuitter&url=https%3A%2F%2Fonakasuitter.meiryo7743.net"
+                rel="noopener"
+                target="_blank"
+                class="app__button app__button--mastodon"
+              >
+                <svg
+                  width="23"
+                  height="24"
+                  viewBox="0 0 75 79"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M73.8393 17.4898C72.6973 9.00165 65.2994 2.31235 56.5296 1.01614C55.05 0.797115 49.4441 0 36.4582 0H36.3612C23.3717 0 20.585 0.797115 19.1054 1.01614C10.5798 2.27644 2.79399 8.28712 0.904997 16.8758C-0.00358524 21.1056 -0.100549 25.7949 0.0682394 30.0965C0.308852 36.2651 0.355538 42.423 0.91577 48.5665C1.30307 52.6474 1.97872 56.6957 2.93763 60.6812C4.73325 68.042 12.0019 74.1676 19.1233 76.6666C26.7478 79.2728 34.9474 79.7055 42.8039 77.9162C43.6682 77.7151 44.5217 77.4817 45.3645 77.216C47.275 76.6092 49.5123 75.9305 51.1571 74.7385C51.1797 74.7217 51.1982 74.7001 51.2112 74.6753C51.2243 74.6504 51.2316 74.6229 51.2325 74.5948V68.6416C51.2321 68.6154 51.2259 68.5896 51.2142 68.5661C51.2025 68.5426 51.1858 68.522 51.1651 68.5058C51.1444 68.4896 51.1204 68.4783 51.0948 68.4726C51.0692 68.4669 51.0426 68.467 51.0171 68.4729C45.9835 69.675 40.8254 70.2777 35.6502 70.2682C26.7439 70.2682 24.3486 66.042 23.6626 64.2826C23.1113 62.762 22.7612 61.1759 22.6212 59.5646C22.6197 59.5375 22.6247 59.5105 22.6357 59.4857C22.6466 59.4609 22.6633 59.4391 22.6843 59.422C22.7053 59.4048 22.73 59.3929 22.7565 59.3871C22.783 59.3813 22.8104 59.3818 22.8367 59.3886C27.7864 60.5826 32.8604 61.1853 37.9522 61.1839C39.1768 61.1839 40.3978 61.1839 41.6224 61.1516C46.7435 61.008 52.1411 60.7459 57.1796 59.7621C57.3053 59.7369 57.431 59.7154 57.5387 59.6831C65.4861 58.157 73.0493 53.3672 73.8178 41.2381C73.8465 40.7606 73.9184 36.2364 73.9184 35.7409C73.9219 34.0569 74.4606 23.7949 73.8393 17.4898Z"
+                    fill="url(#paint0_linear_549_34)"
+                  />
+                  <path
+                    d="M61.2484 27.0263V48.114H52.8916V27.6475C52.8916 23.3388 51.096 21.1413 47.4437 21.1413C43.4287 21.1413 41.4177 23.7409 41.4177 28.8755V40.0782H33.1111V28.8755C33.1111 23.7409 31.0965 21.1413 27.0815 21.1413C23.4507 21.1413 21.6371 23.3388 21.6371 27.6475V48.114H13.2839V27.0263C13.2839 22.7176 14.384 19.2946 16.5843 16.7572C18.8539 14.2258 21.8311 12.926 25.5264 12.926C29.8036 12.926 33.0357 14.5705 35.1905 17.8559L37.2698 21.346L39.3527 17.8559C41.5074 14.5705 44.7395 12.926 49.0095 12.926C52.7013 12.926 55.6784 14.2258 57.9553 16.7572C60.1531 19.2922 61.2508 22.7152 61.2484 27.0263Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_549_34"
+                      x1="37.0692"
+                      y1="0"
+                      x2="37.0692"
+                      y2="79"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#6364FF" />
+                      <stop offset="1" stop-color="#563ACC" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://line.me/R/share?text=%E3%81%8A%E8%85%B9%E3%81%8C%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%20%23onakasuitter%0Ahttps%3A%2F%2Fonakasuitter.meiryo7743.net"
+                rel="noopener"
+                target="_blank"
+                class="app__button app__button--line"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M19.365 9.863a.631.631 0 0 1 0 1.261H17.61v1.125h1.755a.63.63 0 1 1 0 1.259h-2.386a.631.631 0 0 1-.627-.629V8.108c0-.345.282-.63.63-.63h2.386a.63.63 0 0 1-.003 1.26H17.61v1.125h1.755zm-3.855 3.016a.63.63 0 0 1-.631.627a.618.618 0 0 1-.51-.25l-2.443-3.317v2.94a.63.63 0 0 1-1.257 0V8.108a.627.627 0 0 1 .624-.628c.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63c.345 0 .63.285.63.63v4.771zm-5.741 0a.632.632 0 0 1-.631.629a.631.631 0 0 1-.627-.629V8.108c0-.345.282-.63.63-.63c.346 0 .628.285.628.63v4.771zm-2.466.629H4.917a.634.634 0 0 1-.63-.629V8.108c0-.345.285-.63.63-.63c.348 0 .63.285.63.63v4.141h1.756a.63.63 0 0 1 0 1.259M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608c.391.082.923.258 1.058.59c.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645c1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="app__nav">
+          <h3 class="heading">その他の SNS の場合</h3>
+
+          <button
+            type="button"
+            onclick="(() => { copyContent(); this.innerHTML = this.innerHTML.replace('する', '済み') })()"
+            class="app__button app__button--copy"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M9 18q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.588T3 20V6h2v14h11v2H5Zm4-6V4v12Z"
+              />
+            </svg>
+            <span>コピーする</span>
+          </button>
+        </nav>
+
+        <p class="app__notice">
+          はじめに、<a href="#disclaimers">注意・免責事項等</a>をご覧ください。
+        </p>
+      </div>
+
+      <article id="how-to-use" class="how-to-use">
+        <h2 class="heading">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
+            width="52"
+            height="52"
             viewBox="0 0 24 24"
-            class="onakasuitter__icon"
+            class="heading__icon"
           >
             <path
               fill="currentColor"
-              d="M23.953 4.57a10 10 0 0 1-2.825.775a4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827a4.996 4.996 0 0 1-2.212.085a4.936 4.936 0 0 0 4.604 3.417a9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985c0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z"
+              d="M11 17h2v-6h-2v6Zm1-8q.425 0 .713-.288T13 8q0-.425-.288-.713T12 7q-.425 0-.713.288T11 8q0 .425.288.713T12 9Zm0 13q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"
             />
           </svg>
-          <span class="onakasuitter__text">ツイートする</span>
-        </a>
-      </div>
+          <span>使い方はとっても簡単！</span>
+        </h2>
 
-      <article class="readme">
-        <h2>使い方</h2>
-        <p>
-          上の「<strong>ツイートする</strong>」ボタンを押すだけ！　とても簡単です！！
-        </p>
+        <ol>
+          <li>おなかが空く</li>
+          <li>onakasuitter へアクセスする（←今ココ）</li>
+          <li>ボタンを選んで押す</li>
+          <li>投稿する</li>
+        </ol>
+      </article>
 
-        <h2>注意・免責事項等</h2>
+      <article id="disclaimers" class="disclaimers">
+        <h2 class="heading">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="52"
+            height="52"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M1 21L12 2l11 19H1Zm3.45-2h15.1L12 6L4.45 19ZM12 18q.425 0 .713-.288T13 17q0-.425-.288-.713T12 16q-.425 0-.713.288T11 17q0 .425.288.713T12 18Zm-1-3h2v-5h-2v5Zm1-2.5Z"
+            />
+          </svg>
+          <span>注意・免責事項等</span>
+        </h2>
+
         <ul>
-          <li>ツイートするには、Twitter にログインする必要があります。</li>
+          <li>投稿するには、当該 SNS にログインする必要があります。</li>
           <li>
-            onakasuitter の制作・運営者は
+            onakasuitter の運営者は
             <a href="https://meiryo7743.net" rel="noopener" target="_blank"
               >Meiryo7743</a
             >
@@ -101,21 +254,34 @@
           </li>
           <li>
             onakasuitter
-            のご利用によって生じたあらゆる不利益（トラブル、損失など）の責任を、運営者は一切負いかねます。必ず利用者様ご自身の判断の下でお使いください。
+            のご利用によって生じたあらゆる不利益（トラブル、損失等）の責任を、運営者は一切負いかねます。必ず利用者様ご自身の判断の下でお使いください。
           </li>
           <li>
-            <a href="https://github.com/Meiryo7743/onakasuitter"
-              >GitHub 上でソースコードを公開している</a
-            >ので、良ければ Star をください。
+            GitHub 上で<a
+              href="https://github.com/Meiryo7743/onakasuitter"
+              rel="noopener"
+              target="_blank"
+              >ソースコード</a
+            >を公開しています。
           </li>
         </ul>
       </article>
     </main>
 
-    <footer class="body__footer">
-      <small class="copyright">
-        © 2022 Meiryo7743 &amp; the “onakasuitter” contributors
-      </small>
+    <footer class="footer">
+      <p class="copyright">
+        <small>
+          &copy; 2022-2023 Meiryo7743 &amp; the “onakasuitter” contributors
+        </small>
+      </p>
     </footer>
+
+    <script>
+      const copyContent = () => {
+        const content =
+          "お腹が空きました！ #onakasuitter\nhttps://onakasuitter.meiryo7743.net";
+        navigator.clipboard.writeText(content);
+      };
+    </script>
   </body>
 </html>
