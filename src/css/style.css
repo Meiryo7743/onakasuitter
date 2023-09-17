@@ -1,0 +1,200 @@
+@media screen {
+  :root {
+    --button-inline-size: max(52px, 1.5rem + 12px * 2);
+    --button-padding: 12px;
+    --container-padding-block: 64px;
+    --container-padding-inline: 32px;
+    --heading-font-size: 1rem;
+    --stack-grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 744px) {
+  :root {
+    --container-padding-block: 128px;
+    --container-padding-inline: calc((100% - (744px - 64px * 2)) / 2);
+    --heading-font-size: 1.5rem;
+    --stack-grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+html {
+  color: #262626;
+  font-family: "Roboto", "Helvetica Neue", "Arial", "Segoe UI", "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 1.25;
+  scroll-behavior: smooth;
+}
+
+a:where(:any-link) {
+  color: #005aff;
+  text-decoration: underline;
+}
+a:where(:any-link:focus) {
+  outline: solid 4px #595959;
+  border-radius: 4px;
+}
+
+.heading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--heading-font-size);
+  row-gap: 16px;
+  text-align: center;
+}
+.heading > svg {
+  aspect-ratio: 1/1;
+  block-size: auto;
+  inline-size: 2em;
+}
+
+.body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-block-size: 100dvh;
+}
+
+.header {
+  background-color: #fff;
+  padding: 16px;
+}
+.title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.app {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--container-padding-block);
+  padding-inline: var(--container-padding-inline);
+  row-gap: calc(var(--container-padding-block) / 2);
+}
+.app__image {
+  aspect-ratio: 1200/630;
+  background-color: #fff;
+  block-size: auto;
+  border-radius: 8px;
+  border: solid 1px #d8d8d8;
+  inline-size: 100%;
+}
+.app__nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.app__list {
+  column-gap: 16px;
+  display: flex;
+  justify-content: center;
+}
+.app__button {
+  align-items: center;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  block-size: auto;
+  border-radius: 50%;
+  border: solid 1px #d8d8d8;
+  cursor: pointer;
+  display: flex;
+  inline-size: var(--button-inline-size);
+  justify-content: center;
+  padding: var(--button-padding);
+}
+.app__button:focus {
+  outline: solid #595959 4px;
+}
+.app__button--x {
+  background-color: #000;
+  color: #fff;
+}
+.app__button--misskey {
+  color: #8ab942;
+}
+.app__button--mastodon {
+  background-color: #17063b;
+}
+.app__button--line {
+  background-color: #06c755;
+  color: #fff;
+}
+.app__button--copy {
+  aspect-ratio: auto;
+  border-radius: 9999px;
+  column-gap: 16px;
+  inline-size: 100%;
+}
+.app__button > svg {
+  aspect-ratio: 1/1;
+  block-size: auto;
+  inline-size: 1.5rem;
+}
+.app__notice {
+  align-self: center;
+  line-height: 1.5;
+}
+
+.how-to-use {
+  background-color: #fff;
+  display: grid;
+  gap: calc(var(--container-padding-block) / 2);
+  grid-template-columns: var(--stack-grid-template-columns);
+  padding-block: var(--container-padding-block);
+  padding-inline: var(--container-padding-inline);
+}
+.how-to-use ol {
+  counter-reset: item;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  row-gap: 32px;
+}
+.how-to-use ol > li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 16px;
+}
+.how-to-use ol > li::before {
+  align-items: center;
+  aspect-ratio: 1/1;
+  background-color: #f2f2f2;
+  block-size: auto;
+  border-radius: 50%;
+  border: solid 1px #d8d8d8;
+  content: counter(item);
+  counter-increment: item;
+  display: flex;
+  font-size: 1.5rem;
+  inline-size: var(--button-inline-size);
+  justify-content: center;
+  line-height: 1;
+  padding: var(--button-padding);
+}
+
+.disclaimers {
+  background-color: #fff2cc;
+  display: grid;
+  gap: calc(var(--container-padding-block) / 2);
+  grid-template-columns: var(--stack-grid-template-columns);
+  padding-block: var(--container-padding-block);
+  padding-inline: var(--container-padding-inline);
+}
+.disclaimers ul {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  list-style-type: disc;
+  padding-inline-start: 1rem;
+  row-gap: 16px;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 32px;
+}
+.copyright {
+  text-align: center;
+}
